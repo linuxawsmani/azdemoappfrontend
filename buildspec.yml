@@ -3,9 +3,9 @@ version: 0.2
 phases:
   build:
     commands:
-      - echo "Deploying Static Website"
+    - echo "Deploying Static Website"
 
   post_build:
     commands:
-      - aws s3 sync . s3://13072026-azdemo-s3-bucket --delete
-      - aws cloudfront create-invalidation --distribution-id E2IBA353FBO4IC --paths "/*" --debug
+    - aws s3 sync . s3://14072026-azdemoapp-s3-bucket --delete
+    - aws cloudfront create-invalidation --distribution-id EQTDEK0AO0IF2 --paths "/*" --debug
