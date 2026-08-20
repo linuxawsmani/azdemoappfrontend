@@ -7,5 +7,5 @@ phases:
 
   post_build:
     commands:
-    - aws s3 sync . s3://14072026-azdemoapp-s3-bucket --delete
-    - aws cloudfront create-invalidation --distribution-id EQTDEK0AO0IF2 --paths "/*" --debug
+    - aws s3 sync . s3://20082026-azdemo-s3bucket --delete
+    - aws cloudfront create-invalidation --distribution-id EVK9QOLXOFJJ9 --paths "/*" --debug
