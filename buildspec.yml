@@ -8,6 +8,6 @@ phases:
   post_build:
     commands:
     - echo "Uploading frontend files to S3..."
-    - aws s3 sync . s3://20082026-azdemo-s3bucket --delete
+    - aws s3 sync . s3://21082026-azdemoapp-s3-bucket --delete
     - echo "S3 upload completed"
-    - aws cloudfront create-invalidation --distribution-id EVK9QOLXOFJJ9 --paths "/*" --debug
+    - aws cloudfront create-invalidation --distribution-id E30C6KUB8EREPP --paths "/*" --debug
