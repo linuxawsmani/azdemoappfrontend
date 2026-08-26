@@ -1,0 +1,8 @@
+phases:
+  build:
+    commands:
+    - echo "Uploading frontend to S3..."
+    - aws s3 sync . s3://azdemoapp-s3-bucket --delete
+    - echo "Creating CloudFront invalidation..."
+    - aws cloudfront create-invalidation --distribution-id EXXMIB6I8CO0U --paths "/*"
+    - echo "CloudFront invalidation completed"
