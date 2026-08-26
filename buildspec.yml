@@ -1,5 +1,9 @@
+version: 0.2
 phases:
   build:
+    commands:
+    - echo "Deploying Static Website"
+  post_build:
     commands:
     - echo "Uploading frontend to S3..."
     - aws s3 sync . s3://azdemoapp-s3-bucket --delete
